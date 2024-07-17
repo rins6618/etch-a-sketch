@@ -9,6 +9,7 @@ function createCanvas(canvasSize = 4) {
         const divElement = document.createElement('div');
         divElement.classList.add("divElement");
         divElement.style.flex = `0 0 ${canvasScaleFac*100}%`;
+        divElement.style.userSelect = "none"
 
         divElement.addEventListener("mouseenter", e => {
             e.target.classList.add("divHover");
