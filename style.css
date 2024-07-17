@@ -21,6 +21,9 @@ body {
     flex-wrap: wrap;
     width: 960px;
     height: 960px;
+    padding: 16px;
+    border: #008ae0 solid 8px;
+    border-radius: 1rem;
 }
 
 .divElement {
@@ -31,6 +34,10 @@ body {
     background-color: #e9ebe8;
 }
 
+.divPainted {
+    background-color: #111;
+}
+
 #resizeButton {
     display: flex;
     align-items: center;
@@ -39,10 +46,9 @@ body {
     width: 640px;
     flex: 0 0 auto;
     font-size: 28px;
-    background-color: #3882f6;
-    border: #f9faf8 solid 0.25em;
+    background-color: #004b7a;
+    border: #008ae0 solid 4px;
     border-radius: 0.5rem;
     padding: 8px;
-    height:  144px
     align-self: center;
 }

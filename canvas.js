@@ -12,6 +12,8 @@ function createCanvas(canvasSize = 4) {
 
         divElement.addEventListener("mouseenter", e => {
             e.target.classList.add("divHover");
+            if (e.buttons === 1)
+                e.target.classList.add("divPainted");
         });
         divElement.addEventListener("mouseleave", e => {
             e.target.classList.remove("divHover");
