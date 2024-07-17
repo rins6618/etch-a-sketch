@@ -1,8 +1,9 @@
-function createCanvas() {
+function createCanvas(canvasSize = 4) {
     const canvasElement = document.querySelector("#canvas");
-    let canvasSize = 4;
+    // wipe off every canvas node element first
+    while (canvasElement.firstChild) canvasElement.removeChild(canvasElement.firstChild);
     const totalCanvasSize = canvasSize**2;
-    let canvasScaleFac = 1 / canvasSize;
+    const canvasScaleFac = 1 / canvasSize;
 
     for (let i = 0; i < totalCanvasSize; i++) {
         const divElement = document.createElement('div');
@@ -20,4 +21,12 @@ function createCanvas() {
 
 }
 
-createCanvas()
+createCanvas();
+const resizeButton = document.querySelector("#resizeButton");
+resizeButton.addEventListener("click", e => {
+    let numberInput = parseInt(prompt("Insert a canvas size (0-100): ", "4"));
+    while (isNaN(numberInput) || numberInput > 100 || 0 > numberInput) {
+        numberInput = parseInt(prompt("Insert a valid canvas size (0-100): ", "4"));
+    }
+    createCanvas(numberInput);
+})
